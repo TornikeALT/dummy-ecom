@@ -1,0 +1,39 @@
+<div class="beauty_container" *ngIf="productData$ | async as product">
+  <div class="main_image">
+    <img
+      [src]="selectedImage || product.images[0]"
+      (click)="handleShowModal(selectedImage || product.images[0])"
+    />
+    <div class="images">
+      <img
+        *ngFor="let img of product.images; let i = index"
+        src="{{ img }}"
+        alt="{{ img }}"
+        class="small_img"
+        appLazyLoad
+        (click)="handleImgChange(i, product.images)"
+      />
+    </div>
+    <app-modal
+      *ngIf="showModal"
+      [images]="product.images"
+      [selectedImage]="selectedImage"
+      (close)="handleCloseModal()"
+    ></app-modal>
+  </div>
+  <div class="product_details">
+    <span class="title">{{ product.title }}</span>
+    <p class="desc">{{ product.description }}</p>
+    <span class="price">Price: {{ product.price }} $</span>
+    <h5 *ngIf="product.stock > 0">In Stock</h5>
+    <button class="add_btn" (click)="addToCart(product)">Add To cart</button>
+    <div class="qty_wrapper">
+      <label for="qty">Quantity:</label>
+      <select name="qty" id="qty" [(ngModel)]="selectedQuantity">
+        <option *ngFor="let qty of [1, 2, 3, 4, 5]" [value]="qty">
+          {{ qty }}
+        </option>
+      </select>
+    </div>
+  </div>
+</div>

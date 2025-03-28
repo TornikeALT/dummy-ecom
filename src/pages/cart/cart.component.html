@@ -1,0 +1,43 @@
+<div class="cart">
+  <div class="cart_title_wrapper">
+    <div class="left">
+      <h2>Shopping Cart</h2>
+      <button
+        *ngIf="cart.length > 0"
+        (click)="handleCartClear()"
+        class="clear_cart"
+      >
+        Clear Cart
+      </button>
+    </div>
+    <p *ngIf="cart.length > 0">Price</p>
+  </div>
+  <div class="cart_items" *ngFor="let item of cart">
+    <img
+      src="{{ item.images[0] }}"
+      alt="{{ item.images[0] }}"
+      class="cart_img"
+    />
+    <div class="cart_item">
+      <div class="title_price">
+        <span class="title">{{ item.title }}</span>
+        <span class="price">${{ item.price }}</span>
+      </div>
+      <span class="brand">Brand: {{ item.brand }}</span>
+      <p class="warranty">Warranty: {{ item.warrantyInformation }}</p>
+      <div class="quantity_actions">
+        <mat-icon (click)="handleProductRemove(item.id)" class="delete"
+          >delete</mat-icon
+        >
+        <span class="quantity">{{ item.quantity }}</span>
+        <mat-icon (click)="hanleCartQuantityUpdate(item.id)" class="add"
+          >add</mat-icon
+        >
+      </div>
+    </div>
+  </div>
+  <span *ngIf="cart.length > 0" class="subtotal"
+    >Subtotal: {{ totalPrice.toFixed(2) }} $</span
+  >
+  <span *ngIf="cart.length === 0" style="padding: 1rem">You Cart Is Empty</span>
+</div>

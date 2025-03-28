@@ -1,0 +1,61 @@
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #f2eded;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1 {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.main_logo {
+  max-width: 5rem;
+}
+.main_logo:hover {
+  cursor: pointer;
+}
+.cart:hover {
+  cursor: pointer;
+}
+.cart_icon {
+  color: #bfbbbb;
+}
+.cart_container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart_qty {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  color: orange;
+  font-weight: 500;
+  font-size: 12px;
+}
+.cart_icon {
+  width: unset;
+  font-size: 50px;
+  height: unset;
+  cursor: pointer;
+}
+.login {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.login_icon {
+  cursor: pointer;
+}
+.name {
+  cursor: pointer;
+}

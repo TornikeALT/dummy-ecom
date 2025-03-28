@@ -1,0 +1,8 @@
+footer {
+  padding: 1rem;
+  border-top: 1px solid #f2eded;
+}
+p {
+  max-width: 1240px;
+  margin: 0 auto;
+}

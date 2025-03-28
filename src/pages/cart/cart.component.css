@@ -1,0 +1,84 @@
+.cart_title_wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: flex-end;
+}
+.clear_cart {
+  background: none;
+  border: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  padding: unset;
+  font-size: 1rem;
+  transition: text-decoration 0.3s ease-in-out;
+}
+.clear_cart:hover {
+  text-decoration: underline;
+}
+.left h2 {
+  font-size: 2rem;
+}
+.cart_items {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin: 5px 0;
+  display: flex;
+}
+.cart_img {
+  max-width: 20rem;
+  width: 100%;
+}
+.cart_item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem;
+}
+.title_price {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.price {
+  font-weight: bold;
+}
+.quantity {
+  margin: 1rem 0;
+}
+.delete:hover {
+  cursor: pointer;
+}
+.subtotal {
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+.quantity_actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 2px solid orange;
+  max-width: 6rem;
+  border-radius: 45px;
+  height: 32px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+.add:hover {
+  cursor: pointer;
+}
+.brand {
+  margin: 1rem 0;
+}
+.warranty {
+  color: #2162a1;
+  font-weight: 500;
+}
+.title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #594e4e;
+}

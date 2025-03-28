@@ -1,0 +1,23 @@
+<header>
+  <img src="/images/49189.jpg" alt="shop" routerLink="/" class="main_logo" />
+  <div class="cart_container">
+    <div class="login" *ngIf="user">
+      <div class="first_name">
+        <span>Welcome: </span>
+        <span routerLink="/profile" class="name">{{ user.firstName }}</span>
+      </div>
+      <mat-icon *ngIf="user" (click)="handleLogout()">logout</mat-icon>
+    </div>
+    <span *ngIf="!user">Log In</span>
+    <mat-icon class="login_icon" routerLink="/login" *ngIf="!user"
+      >login</mat-icon
+    >
+    <mat-icon class="cart_icon" routerLink="/cart">shopping_cart</mat-icon>
+    <span class="cart_qty">{{ cartTotalItems }}</span>
+  </div>
+</header>
+<div class="container">
+  <app-navigation *ngIf="!isLoginRoute" />
+  <router-outlet />
+</div>
+<app-footer />

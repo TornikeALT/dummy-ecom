@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div
+    *ngFor="let item of furnitureProducts"
+    class="item"
+    routerLink="/furniture/{{ item.id }}"
+  >
+    <img
+      src="{{ item.images[0] }}"
+      alt="tops"
+      class="product_img"
+      loading="lazy"
+      appLazyLoad
+    />
+    <h2>{{ item.title }}</h2>
+    <span class="price">Price: {{ item.price }}$</span>
+  </div>
+</div>

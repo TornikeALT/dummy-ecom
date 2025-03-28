@@ -1,0 +1,24 @@
+<form class="login">
+  <div class="form_element">
+    <label for="username">Enter Usename</label>
+    <input
+      type="text"
+      name="username"
+      id="username"
+      [(ngModel)]="username"
+      (ngModelChange)="onInputChange()"
+    />
+  </div>
+  <div class="form_element">
+    <label for="pwd">Enter your password</label>
+    <input
+      type="password"
+      name="pwd"
+      id="pwd"
+      [(ngModel)]="password"
+      (ngModelChange)="onInputChange()"
+    />
+  </div>
+  <div *ngIf="errorMsg" class="error">{{ errorMsg }}</div>
+  <button (click)="onLogin()" type="submit" class="login_btn">Login</button>
+</form>

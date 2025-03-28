@@ -1,0 +1,14 @@
+<div class="overlay" (click)="handleClose()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <div class="images">
+      <mat-icon (click)="handlePrevImg()" class="back_img">
+        arrow_back_ios
+      </mat-icon>
+      <img [src]="selectedImage" alt="{{ selectedImage }}" class="big_image" />
+      <mat-icon (click)="handleNextImg()" class="next_img">
+        arrow_forward_ios
+      </mat-icon>
+    </div>
+    <mat-icon (click)="handleClose()" class="close_btn">close</mat-icon>
+  </div>
+</div>
